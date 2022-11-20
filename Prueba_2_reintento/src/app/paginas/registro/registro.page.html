@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <form [formGroup]="formularioRegistro" novalidate>
+    <ion-card>
+      <ion-item>
+        <ion-label position="floating">Nombre</ion-label>
+        <ion-input required formControlName="nombre"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Apellido</ion-label>
+        <ion-input required formControlName="apellido"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Edad</ion-label>
+        <ion-input required formControlName="edad"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Nombre de Usuario</ion-label>
+        <ion-input required formControlName="nombreUsuario"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input required formControlName="contraseña"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Fecha de Nacimiento</ion-label>
+        <ion-input required formControlName="contraseña"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Genero</ion-label>
+        <ion-input required formControlName="contraseña"></ion-input>
+      </ion-item>
+    </ion-card>
+  </form>
+  <ion-button block color="primary" type="submit" (click)="guardar()">
+    Registrar Usuario
+  </ion-button>
+  <br>
+
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="terciary">
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/iniciar-sesion']">
+        ¿Ya tienes una cuenta?
+        <br>
+        Inicia Sesion
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
